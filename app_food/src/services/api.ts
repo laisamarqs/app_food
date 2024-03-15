@@ -5,6 +5,14 @@ type Product = {
   price: number
 }
 
+type Restaurant = {
+  id: number;
+  name: string;
+ 
+};
+
+type Restaurants = Restaurant[];
+
 type PurchasePayload = {
   products: Product[]
   delivery: {
@@ -39,10 +47,10 @@ const api = createApi({
     baseUrl: 'https://fake-api-tau.vercel.app/api/efood/'
   }),
   endpoints: (builder) => ({
-    getRestaurantsList: builder.query<Restaurants[], void>({
+    getRestaurantsList: builder.query<Restaurants, void>({
       query: () => 'restaurantes'
     }),
-    getRestaurant: builder.query<Restaurants, string>({
+    getRestaurant: builder.query<Restaurant, string>({
       query: (id) => `restaurantes/${id}`
     }),
     purchase: builder.mutation<PurchaseResponse, PurchasePayload>({

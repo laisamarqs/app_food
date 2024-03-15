@@ -1,5 +1,11 @@
 import { SyntheticEvent } from 'react'
 
+
+interface Menu {
+  preco?: number;
+  
+}
+
 export const formatDescription = (desc: string) => {
   if (desc.length > 210) {
     return desc.slice(0, 207) + '...'
@@ -18,7 +24,7 @@ export const calculeTotalPrice = (items: Menu[]) => {
     if (currentValue.preco) {
       return (acc += currentValue.preco)
     }
-    return 0
+    return acc; 
   }, 0)
 }
 
