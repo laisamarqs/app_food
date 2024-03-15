@@ -1,0 +1,26 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Banner /> > should be render correctly 1`] = `
+<div
+  class="sc-dcJsrY gzPucS"
+>
+  <img
+    alt="restaurante"
+    class="loading"
+    height="100"
+    loading="lazy"
+    src="img/img1.png"
+    width="100"
+  />
+  <div
+    class="sc-iGgWBj ccBhfb"
+  >
+    <span>
+      italiana
+    </span>
+    <h2>
+      restaurante
+    </h2>
+  </div>
+</div>
+`;
